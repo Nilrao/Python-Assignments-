@@ -6,7 +6,7 @@ floor = int(input("Which floor you are at?"))
 go = int(input("Which floor you want to go at?"))
 max = 10
 total = 0
-if go < 11:
+if go and floor in range(0,11) :
     total = go - floor
     if total > 0:
         while floor < go:
@@ -22,5 +22,4 @@ if go < 11:
             floor -= 1
         print(f"R e a c h e d  a t  f l o o r  {go}")
 else:
-    print("Valid number")
-
+    print("Not a floor number")
